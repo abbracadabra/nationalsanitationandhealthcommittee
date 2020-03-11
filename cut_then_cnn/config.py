@@ -1,5 +1,5 @@
 trainset='trainset'
-valset='validationset'
+valset='valset'
 batchsize=20
 vb = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 letterdir = "letter_processed"
