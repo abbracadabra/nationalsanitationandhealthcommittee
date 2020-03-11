@@ -22,7 +22,7 @@ if __name__=='__main__':
     val_history = []
     val_acc_max = 0;val_best_pos=-1
     saver = tf.train.Saver()
-    op = tf.train.AdamOptimizer(0.00001).minimize(loss)
+    op = tf.train.AdamOptimizer(0.0001).minimize(loss)
     sess = tf.Session()
     sess.run(tf.global_variables_initializer())
     saver.restore(sess,modelfile)

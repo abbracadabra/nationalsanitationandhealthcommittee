@@ -196,6 +196,8 @@ def processValidationImg():
         try:
             fp = path.join(valset, fn)
             label = fn.split('.')[0].split('_')[1].upper()
+            if len(label)!=4:
+                raise Exception("");
             im = processim(fp)
 
             # cv2.imwrite(path.join('xxxx', uuid.uuid4().hex + '_' + label[0] + '.jpg'), im[:, 20:44, :])
@@ -209,4 +211,4 @@ def processValidationImg():
         lb+=[vb.index(label[0]),vb.index(label[1]),vb.index(label[2]),vb.index(label[3])]
     return x,lb
 
-processValidationImg()
+#processValidationImg()
